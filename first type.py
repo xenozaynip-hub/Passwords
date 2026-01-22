@@ -19,6 +19,6 @@ else:
 if score <= 6: 
      print("twinkle twinkle little star how i wonder why youre so bad at making passwords")
 else:
-     print("baby shark doo doo doo doo doo doo")
+     print("baby shark doo doo doo doo doo")
 
 print(password, "is your password and your score is", score, "its in the", strength, "category")
