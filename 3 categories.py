@@ -13,13 +13,13 @@ else:
     score += 30
 
 if score < 10 :
-    print("you really need a new password")
+    print("You really need a new password")
     strength = "weak"
 elif score == 10 :
-    print("not bad but could be better")
+    print("Not bad but could be better")
     strength = "mid"
 else:
-    print("youre good at making passwords")
+    print("Youre good at making passwords")
     strength = "amazing"
 
 if score < 10: 
