@@ -1,4 +1,4 @@
-password = "asdwyxcasasddsx" #can be changed to test different passwords
+password = "asddsx" #can be changed to test different passwords
 score = 0
 
 #Gives points based on length of password
@@ -13,15 +13,15 @@ else:
 #prints out strength of password based on score
 if score < 10:
     strength = "Weak"
-    print(strength, "You really need a new password",
+    print("You really need a new password",
           "Twinkle twinkle little star how i wonder why youre so bad at making passwords")
 elif 10 <= score <= 15:
     strength = "Mid"
-    print(strength, "Not bad but could be better",
+    print("Not bad but could be better",
           "Youre getting there but still not good enough")
 else:
     strength = "Amazing"
-    print(strength, "Youre good at making passwords ^^",
+    print("Youre good at making passwords ^^",
           "Microwave popcorn is better than stove popcorn")
 
 print(f"{password} is your password and your score is {score}, its in the {strength} category")
