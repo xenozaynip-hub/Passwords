@@ -1,32 +1,27 @@
+password = "asdwyxcasasddsx" #can be changed to test different passwords
 score = 0
-strength1 = "amazing"
-strength2 = "mid"
-strength3 = "weak"
-password = "sa" #can be changed to test different passwords
-lenght = len(password)
 
-if lenght < 10:
+#Gives points based on length of password
+length = len(password)
+if length < 5:
     score = 0
-elif lenght >= 10 and lenght < 20:
+elif 5 <= length < 15:
     score += 10
 else:
-    score += 30
+    score += 20 
 
-if score < 10 :
-    print("You really need a new password")
-    strength = "weak"
-elif score == 10 :
-    print("Not bad but could be better")
-    strength = "mid"
+#prints out strength of password based on score
+if score < 10:
+    strength = "Weak"
+    print(strength, "You really need a new password",
+          "Twinkle twinkle little star how i wonder why youre so bad at making passwords")
+elif 10 <= score <= 15:
+    strength = "Mid"
+    print(strength, "Not bad but could be better",
+          "Youre getting there but still not good enough")
 else:
-    print("Youre good at making passwords")
-    strength = "amazing"
+    strength = "Amazing"
+    print(strength, "Youre good at making passwords ^^",
+          "Microwave popcorn is better than stove popcorn")
 
-if score < 10: 
-     print("twinkle twinkle little star how i wonder why youre so bad at making passwords")
-elif score == 10:
-     print("youre getting there but still not good enough")
-else:
-     print("baby shark doo doo doo doo doo doo")
-
-print(password, "is your password and your score is", score, "its in the", strength, "category")
+print(f"{password} is your password and your score is {score}, its in the {strength} category")
