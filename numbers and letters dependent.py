@@ -1,4 +1,4 @@
-password = "222112" #can be changed to test different passwords
+password = "A" #can be changed to test different passwords
 score = 0
 
 #Gives points based on length of password
@@ -13,6 +13,10 @@ else:
 #Gives points based on numbers in password
 numb_count = sum(1 for char in password if char.isdigit())
 score += numb_count
+
+#Gives points based on uppercase letters in password
+upper_count = sum(1 for char in password if char.isupper())
+score += upper_count
 
 #prints out strength of password based on score
 if score < 10:
