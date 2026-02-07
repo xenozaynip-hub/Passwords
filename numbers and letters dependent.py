@@ -1,4 +1,4 @@
-password = "44aaa4" #can be changed to test different passwords
+password = "44a4" #can be changed to test different passwords
 score = 0
 
 #Gives points based on length of password
@@ -25,14 +25,20 @@ for count in repeated_char_counts.values():
         score -= count
 
 #print strength of password
-if score < 10:
+if 0 <= score < 10:
     strength = "Weak"
     print("You really need a new password",
           "Twinkle twinkle little star how i wonder why youre so bad at making passwords")
+    
+elif 0 > score:
+    strength = "jeez-"
+    print("is that even considered as a password?",)
+
 elif 10 <= score <= 15:
     strength = "Mid"
     print("Not bad but could be better",
           "Youre getting there but still not good enough")
+
 else:
     strength = "Amazing"
     print("Youre good at making passwords ^^",
