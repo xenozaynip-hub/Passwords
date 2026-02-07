@@ -1,24 +1,30 @@
-password = "A" #can be changed to test different passwords
+password = "44aaa4" #can be changed to test different passwords
 score = 0
 
 #Gives points based on length of password
 length = len(password)
-if length < 5:
+if length <= 5:
     score = 0
-elif 5 <= length < 15:
+elif 5 < length < 15:
     score += 10
 else:
     score += 20 
 
-#Gives points based on numbers in password
-numb_count = sum(1 for char in password if char.isdigit())
-score += numb_count
+#points for having digets and letters
+char = {}
+for char in password:
+    char = sum(1 for char in password if char.isdigit() or char.isupper() or char.islower())
 
-#Gives points based on uppercase letters in password
-upper_count = sum(1 for char in password if char.isupper())
-score += upper_count
+#Subtracts points for repeated characters
+repeated_char_counts = {}
+for char in password:
+    if char.isdigit() or char.isupper() or char.islower():
+        repeated_char_counts[char] = repeated_char_counts.get(char, 0) + 1
+for count in repeated_char_counts.values():
+    if count > 1:
+        score -= count
 
-#prints out strength of password based on score
+#print strength of password
 if score < 10:
     strength = "Weak"
     print("You really need a new password",
