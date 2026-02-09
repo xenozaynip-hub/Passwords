@@ -3,13 +3,14 @@ from numbers_letters_dependent import calculate_password_score, calculate_passwo
 def test_password_strength() -> None:
     #Tests cases for different password strengths
     test_cases: dict[str, tuple[str, int]] = {
-        "12345": ("Weak", 1),
-        "abcde": ("Weak", 1),
-        "abc123": ("Mid", 12),
-        "Abc123!": ("Mid", 15),
-        "aaaaaa": ("Weak", 5),
-        "A1!": ("Weak", 4),
-        "A1!a2@b3#": ("Mid", 15)
+        "": ("jeez-", 0),
+        "AAAAAAAAAAAAAAAAAAAAAAAAA": ("jeez-", -4),
+        "AV46fssx1^^aascvbbs": ("Mid", 15),
+        "awf?==^12wsas": ("Weak", 6),
+        "12345655": ("Weak", 8),
+        "lalalla1247fsaaaASSD1^1": ("Mid", 10),
+        "adcx03ß2sasx": ("Weak", 6),
+        "Dass5ist_ein_sehr_starkes_Passwort!": ("jeez-", -1),
     }
 
     for pwd, (expected_strength, expected_score) in test_cases.items():
@@ -20,4 +21,4 @@ def test_password_strength() -> None:
 
 if __name__ == "__main__":
     test_password_strength()
-    print("All tests passed!")
+    print("The microwave popcorn is popping, all tests passed!")
