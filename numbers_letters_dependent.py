@@ -1,5 +1,5 @@
 #change this to test different passwords
-password = "44a4"
+password = "adcx03ß2sasx"
 
 def calculate_password_score(password: str) -> int:
     score = 0   
