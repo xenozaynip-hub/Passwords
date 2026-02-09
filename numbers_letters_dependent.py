@@ -40,9 +40,9 @@ def calculate_password_score(password: str) -> int:
 
 #determines password strength category based on score
 def calculate_password_strength(score: int) -> tuple[str, str]:
-    if score < 0:
+    if score <= 0:
         return "jeez-", "is that even considered as a password?"
-    elif 0 <= score < 10:
+    elif 0 < score < 10:
         return "Weak", "You really need a new password. Twinkle twinkle little star how i wonder why youre so bad at making passwords"
     elif 10 <= score <= 15:
         return "Mid", "Not bad but could be better. Youre getting there but still not good enough"
